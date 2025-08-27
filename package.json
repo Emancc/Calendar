@@ -1,0 +1,16 @@
+{
+  "name": "calendar-app",
+  "version": "1.0.0",
+  "description": "Aplicación de Calendario",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
+  }
+}
