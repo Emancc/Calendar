@@ -11,17 +11,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Setup SSH
         uses: webfactory/ssh-agent@v0.8.0
-        whit:
+        with:
           ssh-private-key: ${{ secrets.SSH_KEY }}
 
-      - name: Deploy to Server
+      - name: Run Deploy Script
         run: |
-          ssh -o StrictHostKeyCheking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }} "
-          cd ~/lemp-sites/emanuel_cepeda/Calendar && 
-          git pull origin main
+          ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }} "
+            cd ~/lemp-sites/eman_cepeda/Calendar &&
+            git pull origin main
           "
