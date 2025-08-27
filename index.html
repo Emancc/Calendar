@@ -5,6 +5,7 @@
     <title>Calendario Interactivo 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -12,39 +13,12 @@
     <!-- Application Structure Plan: A tabbed interface to switch between May and June 2025. This design focuses user attention on one month at a time, which is intuitive for a calendar. Clicking a day opens a modal for note-taking, making the calendar interactive without cluttering the main view. This structure is more user-friendly and space-efficient than a long scrollable page. -->
     <!-- Visualization & Content Choices: Report Info: Monthly Calendar Grids -> Goal: Organize/Inform -> Viz/Presentation: HTML/CSS Grid via Tailwind -> Interaction: Clickable day cells opening a note-taking modal. Report Info: User Notes -> Goal: Organize -> Viz/Presentation: Textarea within a modal -> Interaction: Save/Close buttons to manage notes for the session. Justification: This approach turns a static calendar into a functional, interactive planner. No charts are needed as the data is not quantitative in a way that benefits from charting. -->
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .tab-active {
-            border-bottom-color: #0d9488; /* color teal-600 */
-            color: #0d9488;
-            font-weight: 600;
-        }
-        .day-cell:hover {
-            background-color: #f5f5f4; /* color stone-100 */
-        }
-        .day-with-note::after {
-            content: '';
-            position: absolute;
-            bottom: 6px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background-color: #0d9488;
-        }
-        .today {
-            background-color: #ccfbf1; /* color teal-100 */
-            border: 1px solid #0d9488;
-        }
-    </style>
+
 </head>
 <body class="text-stone-800 antialiased bg-gray-200">
     <header class="flex flex-col justify-center items-center my-4 ">
         <h1 class="text-2xl font-semibold">Calendario Emanzh 2025</h1>
-        <p class="text-stone-600">un calendario echo para poder ser copado</p>
+        <p class="text-stone-600">calendario personalizado</p>
     </header>
 
     <div class="container mx-auto p-4 sm:p-6 lg:p-8 max-w-5xl">
