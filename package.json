@@ -1,5 +1,8 @@
 {
   "name": "Calendar",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "lockfileVersion": 3,
   "requires": true,
   "packages": {}
